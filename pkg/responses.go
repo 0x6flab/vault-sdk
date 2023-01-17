@@ -71,3 +71,34 @@ type ADCheckStatus struct {
 	Response
 	Data ADCheckStatusData `json:"data,omitempty"`
 }
+
+type AlibabaRoleResponse struct {
+	InlinePolicies []string `json:"inline_policies,omitempty"`
+	MaxTTL         uint64   `json:"max_ttl,omitempty"`
+	RemotePolicies []string `json:"remote_policies,omitempty"`
+	RoleArn        string   `json:"role_arn,omitempty"`
+	TTL            uint64   `json:"ttl,omitempty"`
+}
+
+type AlibabaRAMCreds struct {
+	AccessKey     string `json:"access_key,omitempty"`
+	Expiration    string `json:"expiration,omitempty"`
+	SecretKey     string `json:"secret_key,omitempty"`
+	SecurityToken string `json:"security_token,omitempty"`
+}
+
+type AWSRootResponse struct {
+	Data AWSRootIAMCreds `json:"data,omitempty"`
+}
+
+type AWSLeaseResponse struct {
+	Data AWSLease `json:"data,omitempty"`
+}
+
+type AWSRoleResponse struct {
+	Data AWSRole `json:"data,omitempty"`
+}
+
+type AWSCredsResponse struct {
+	Data AWSCreds `json:"data,omitempty"`
+}
